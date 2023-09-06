@@ -3,7 +3,6 @@ function scrollAppear() {
   var sideImage = document.querySelector('.sideImage');
   var introPosition = introText.getBoundingClientRect().top;
   var imagePosition = sideImage.getBoundingClientRect().top;
-  
   var screenPosition = window.innerHeight / 1.2;
 
   if(introPosition < screenPosition) {
