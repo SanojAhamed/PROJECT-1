@@ -59,7 +59,7 @@ function login() {
 // CheckBox Function
 function goFurther(){
   if (document.getElementById("chkAgree").checked == true) {
-    document.getElementById('btnSubmit').style = 'background: linear-gradient(to right, #FA4B37, #DF2771);';
+    document.getElementById('btnSubmit').style = 'background: linear-gradient(to right, #4AA017, #b3f58d);';
   }
   else{
     document.getElementById('btnSubmit').style = 'background: lightgray;';
