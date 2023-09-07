@@ -4,12 +4,12 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatbtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
 
-let userMessage = null; // Variable to store the user's message
-const API_KEY = "YOUR_OPENAI_API_KEY_HERE"; // Replace with your actual API key
+let userMessage = null; // Variable to store user's message
+const API_KEY = "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"; // Paste your API key here
 const inputInitHeight = chatInput.scrollHeight;
 
-// Function to create a chat message element
 const createChatLi = (message, className) => {
+  //Create a chat <li> element with passed message and class name
   const chatLi = document.createElement("li");
   chatLi.classList.add("chat", className);
   let chatContent =
@@ -18,11 +18,11 @@ const createChatLi = (message, className) => {
       : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
   chatLi.innerHTML = chatContent;
   chatLi.querySelector("p").textContent = message;
-  return chatLi;
+  return chatLi; // return chat <li> element
 };
 
-// Function to generate a response from the chatbot
 const generateResponse = (incomingChatli) => {
+  // Generate a random response from the bot
   const API_URL = "https://api.openai.com/v1/chat/completions";
   const messageElement = incomingChatli.querySelector("p");
 
@@ -43,6 +43,7 @@ const generateResponse = (incomingChatli) => {
     }),
   };
 
+  // Send POST request to API, get response and set the response as paragraph text
   fetch(API_URL, requestOptions)
     .then((res) => res.json())
     .then((data) => {
@@ -51,14 +52,13 @@ const generateResponse = (incomingChatli) => {
     .catch(() => {
       messageElement.classList.add("error");
       messageElement.textContent =
-        "Oops! Something went wrong. Please try again.";
+        "Oops Something went wrong. Please try again.";
     })
     .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 };
 
-// Function to handle user input
 const handleChat = () => {
-  userMessage = chatInput.value.trim(); // Get the user-entered message and remove extra whitespace
+  userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
   if (!userMessage) return;
 
   // Clear the input textarea and set its height to default
@@ -78,29 +78,25 @@ const handleChat = () => {
   }, 600);
 };
 
-// Event listener for adjusting textarea height based on content
 chatInput.addEventListener("input", () => {
+  // Adjust the height of the input textarea based on its content
   chatInput.style.height = `${inputInitHeight}px`;
   chatInput.style.height = `${chatInput.scrollHeight}px`;
 });
 
-// Event listener for handling Enter key press
 chatInput.addEventListener("keydown", (e) => {
+  // If Enter key is pressed without Shift key and the window
+  // width is greater than 800px, handle the chat
   if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
     e.preventDefault();
     handleChat();
   }
 });
 
-// Event listener for sending a message when the send button is clicked
 sendChatbtn.addEventListener("click", handleChat);
-
-// Event listener for closing the chatbot
 closeBtn.addEventListener("click", () =>
   document.body.classList.remove("show-chatbot")
 );
-
-// Event listener for toggling the chatbot visibility
 chatbotToggler.addEventListener("click", () =>
   document.body.classList.toggle("show-chatbot")
 );

@@ -16,10 +16,10 @@
             <div class="col-md-9">
                 <div class="card-header">
                     <div class="card-header">
-        <h1>User View Details</h1>
+        <h1 style="color: #4AA017; margin-top: 30px; margin-bottom: -50px; text-align: center;">User Details</h1>
     </div>
     <div class="card-body">
-    <button class="btn btn-success"> <a href="add.php" class="text-light"> View Details  </a> </button>
+    <!-- <button class="btn btn-success"> <a href="add.php" class="text-light"> View Details  </a> </button> -->
      <br/>
      <br/>
 
@@ -41,9 +41,9 @@
     <?php
      $con=new mysqli('localhost','root','','quizzify');
      if($con){
-        echo "connection successfull";
+        // echo "connection successfull";
      }else{
-        die(mysql_error($con));
+        die(mysqli_error($con));
      }
      
 

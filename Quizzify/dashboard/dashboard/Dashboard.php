@@ -29,7 +29,7 @@
                 <ul>
                     <li>
                        <a href="" class="active">
-                       <img src="dashboard1.png" alt="Image Description">
+                       <img src="dashboard1.png" alt="Image Description" ">
                             <small>Dashboard</small>
                         </a>
                     </li>

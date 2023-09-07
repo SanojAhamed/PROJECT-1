@@ -7,7 +7,7 @@ session_start();
 <html>
 
 <head>
-<link rel="shortcut icon" type="png" href="http://localhost/New/images/icon2.png">
+    <link rel="shortcut icon" type="png" href="http://localhost/New/images/icon2.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Comaptible" content="IE=edge">
     <title>Quizzify</title>
@@ -94,19 +94,19 @@ session_start();
             height: auto;
         }
 
-        
-  input{
-    margin: 10px;
-    height: 40px;
-    width: 50px;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    font-family: arimo;
-    font-size: 1.2rem;
-    background: #d4ece2;
-  
-  }
+
+        input {
+            margin: 10px;
+            height: 40px;
+            width: 50px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            font-family: arimo;
+            font-size: 1.2rem;
+            background: #d4ece2;
+
+        }
 
         /* Styles for the pop-up container */
         .popup-container {
@@ -145,35 +145,35 @@ session_start();
     <!-- Navigation Bar -->
     <header id="header">
         <nav>
-            <div class="logo"><img src="http://localhost/New/images/QUIZZIFY.png" alt="logo"></div>
+            <div class="logo"><img src="http://localhost/Quizzify/Quizzify/images/QUIZZIFY.png" alt="logo"></div>
             <ul>
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="#QuizCreations">Quiz</a></li>
-                <li><a href="#contactus_section">Blog</a></li>
-                <li><a href="#aboutus">About us</a></li>
-                <li><a href="#team_section">Team</a></li>
+            <li><a href="../../QuizCreationapi/index.php">Quiz</a></li>
+				<li><a href="http://localhost/Quizzify/Quizzify/Interface/php_files/blog.php">Blog</a></li>
+				<li><a href="#about_section">About us</a></li>
+				<!-- <li><a href="#team_section">Team</a></li> -->
             </ul>
-            <div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="http://localhost/New/images/icon/search.png" alt="search" onclick=slide()></div>
+            <div class="srch"><input type="text" class="search2" placeholder="Search here..." style="height: 10px; width:90px; border: none; background: transparent;"><img src="http://localhost/Quizzify/Quizzify/images/icon/search.png" alt="search" onclick=slide()></div>
 
             <?php
 
             if (isset($_SESSION["id"])) {
             ?>
-                <a class="get-started" href="http://localhost/New/Includes/logout.inc.php">Logout</a>
+                <!-- <a class="get-started" href="http://localhost/New/Includes/logout.inc.php">Logout</a> -->
+               <a class="get-started" href="http://localhost/Quizzify/Quizzify/Interface/php_files/user_profile.php">Profile</a>
 
             <?php
             } else {
 
             ?>
-                <a class="get-started" href="http://localhost/New/Interface/php_files/registration.php">Get Started</a>
+                <a class="get-started" href="http://localhost/Quizzify/Quizzify/Interface/php_files/registration.php">Get Started</a>
             <?php
             }
             ?>
 
 
-            <img src="http://localhost/New/images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+            <img src="http://localhost/Quizzify/Quizzify/images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
             <div class="side-menu" id="side-menu">
-                <div class="close" onclick="sideMenu(1)"><img src="http://localhost/New/images/icon/close.png" alt=""></div>
+                <div class="close" onclick="sideMenu(1)"><img src="http://localhost/Quizzify/Quizzify/images/icon/close.png" alt=""></div>
                 <!-- <div class="user">
 				<img src="images/creator/Sanoj.jpg" alt="Username">
 				<p>Sanoj Ahamed</p> -->
@@ -216,20 +216,20 @@ session_start();
             <div class="button-container">
 
                 <button onclick="openPopup()">Play Now</button>
-                <button>Create Quiz</button>
+                <button onclick="redirect()">Create Quiz</button>
 
             </div>
 
         </div>
         <div class="image-section">
-            <img src="http://localhost/New/images/gif.gif" alt="Image" class="image2">
+            <img src="http://localhost/Quizzify/Quizzify/images/gif.gif" alt="Image" class="image2">
         </div>
     </div>
     <!-- Pop-up container -->
     <div class="popup-container" id="popupContainer">
         <!-- Pop-up box -->
         <div class="popup-box">
-            <span class="close-button" onclick="closePopup()">&times;</span>
+            <!-- <span class="close-button" onclick="closePopup()">&times;</span> -->
             <h2>Enter the Passcode</h2>
             <div class="userInput" style="display: flex; justify-content: center;">
                 <input type="text" id='1st' maxlength="1" onkeyup="clickEvent(this,'sec')">
@@ -239,7 +239,7 @@ session_start();
                 <input type="text" id="fourth" maxlength="1">
             </div><br><br><br>
 
-            <button onclick="closePopup()">Verify</button>
+            <a class="get-started" href="http://localhost/Quizzify/Quizzify/QuizCreation/quiz.php">Verify</a>
         </div>
     </div>
 
@@ -254,13 +254,13 @@ session_start();
     <footer>
         <div class="footer-container">
             <div class="left-col">
-                <img src="http://localhost/New/images/QUIZZIFY.png" style="width: 200px;">
+                <img src="http://localhost/Quizzify/Quizzify/images/QUIZZIFY.png" style="width: 200px;">
                 <div class="logo"></div>
 
                 <p class="rights-text">Copyright © 2023 Created By UWU TEAM, All Rights Reserved.</p>
                 <br>
-                <p><img src="http://localhost/New/images/icon/location.png"> Passara Road, Badulla</p><br>
-                <p><img src="http://localhost/New/images/icon/phone.png"> 055-222-4446<br><img src="http://localhost/New/images/icon/mail.png">&nbsp; </p>
+                <p><img src="http://localhost/Quizzify/Quizzify/images/icon/location.png"> Passara Road, Badulla</p><br>
+                <p><img src="http://localhost/Quizzify/Quizzify/images/icon/phone.png"> 055-222-4446<br><img src="http://localhost/Quizzify/Quizzify/images/icon/mail.png">&nbsp; </p>
             </div>
             <div class="right-col">
                 <h1 style="color: #fff">Our Newsletter</h1>
@@ -283,6 +283,10 @@ session_start();
         // Function to close the pop-up
         function closePopup() {
             document.getElementById('popupContainer').style.display = 'none';
+        }
+
+        function redirect() {
+            window.location.href = 'http://localhost/Quizzify/Quizzify/public_html/index.php';
         }
     </script>
 

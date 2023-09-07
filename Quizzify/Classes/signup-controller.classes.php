@@ -8,7 +8,7 @@ class signupController extends signup
     private $lastname;
     private $email;
     private $username;
-    private $password;
+    private $password;  
     private $confirm_password;
     
 
@@ -28,32 +28,32 @@ class signupController extends signup
     public function signupUser()
     {
         if ($this->emptyInput() !== false) {
-            header('Location:http://localhost/New/Interface/php_files/registration.php?error=emptyInput');
+            header('Location:http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=emptyInput');
             //debug
             // print_r("empty input");
             exit();
         }
-        if ($this->invalidUsername() !== false) {
-            header('Location: http://localhost/New/Interface/php_files/registration.php?error=invalidUser');
+         else if ($this->invalidUsername() !== false) {
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=invalidUser');
             //debug
             // print_r("invalid username");
             exit();
         }
-        if ($this->invalidEmail() !== false) {
-            header('Location: http://localhost/New/Interface/php_files/registration.php?error=invaliEmail');
+        else if ($this->invalidEmail() !== false) {
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=invaliEmail');
             //debug
             // print_r("invalid email");
             exit();
         }
-        if ($this->passwordMatch() !== false) {
-            header('Location:http://localhost/New/Interface/php_files/registration.php?error=passwordDonotMatch');
+        else if ($this->passwordMatch() !== false) {
+            header('Location:http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=passwordDonotMatch');
             //debug
             // print_r("passwords do not match");
             exit();
         }
 
-        if ($this->incorrectPwd() !== false) {
-            header('Location:http://localhost/New/Interface/php_files/registration.php?error=incorrectPwd');
+        else if ($this->incorrectPwd() !== false) {
+            header('Location:http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=incorrectPwd');
             //debug
             // print_r("incorrectpwd");
             // print_r ($this->password);
@@ -61,15 +61,15 @@ class signupController extends signup
             exit();
         }
 
-        if ($this->userTaken() !== false) {
-            header('Location:http://localhost/New/Interface/php_files/registration.php?error=userExists');
+        else if ($this->userTaken() !== false) {
+            header('Location:http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=userExists');
             //debug
             // print_r("UserAlready exists");
             exit();
         }
 
-        if ($this->emailTaken() !== false) {
-            header('Location:http://localhost/New/Interface/php_files/registration.php?error=emailExists');
+        else if ($this->emailTaken() !== false) {
+            header('Location:http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=emailExists');
             //debug
             // print_r("email already exists");
             exit();

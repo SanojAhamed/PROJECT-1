@@ -70,8 +70,7 @@
 			<div class="logo"><img src="../../images/QUIZZIFY.png" alt="logo"></div>
 			<ul>
 				<li><a class="active" href="">Home</a></li>
-				<li><a href="../../QuizCreation/quiz.php">Quiz</a></li>
-				<li><a href="../../Chatbot/index.php">chatbot</a></li>
+				<li><a href="../../QuizCreationapi/index.php">Quiz</a></li>
 				<li><a href="blog.php">Blog</a></li>
 				<li><a href="#about_section">About us</a></li>
 				<li><a href="#team_section">Team</a></li>
@@ -155,7 +154,7 @@
 		</center>
 		<div class="totalcard">
 			<div class="card">
-				<center><img src="../../images/userDp.png"></center>
+				<center><img src="../../images/creator/Sanoj.jpg"></center>
 				<center>
 					<div class="card-title">Sanoj Ahamed</div>
 					<div id="detail">
@@ -166,9 +165,9 @@
 				</center>
 			</div>
 			<div class="card">
-				<center><img src="../../images/creator/Sanoj.jpg"></center>
+				<center><img src="../../images/creator/samir.jpeg"></center>
 				<center>
-					<div class="card-title">Sanoj Ahamed</div>
+					<div class="card-title">Samir Hussain</div>
 					<div id="detail">
 						<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
 						<div class="duty"></div>
@@ -178,9 +177,9 @@
 			</div>
 
 			<div class="card">
-				<center><img src="../../images/creator/Sanoj.jpg"></center>
+				<center><img src="../../images/creator/userDp.png"></center>
 				<center>
-					<div class="card-title">Sanoj Ahamed</div>
+					<div class="card-title">Aysha Cader</div>
 					<div id="detail">
 						<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
 						<div class="duty"></div>
@@ -189,9 +188,9 @@
 				</center>
 			</div>
 			<div class="card">
-				<center><img src="../../images/creator/Sanoj.jpg"></center>
+				<center><img src="../../images/creator/userDp.png"></center>
 				<center>
-					<div class="card-title">Sanoj Ahamed</div>
+					<div class="card-title">Sumra Inshaf</div>
 					<div id="detail">
 						<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
 						<div class="duty"></div>
@@ -200,9 +199,9 @@
 				</center>
 			</div>
 			<div class="card">
-				<center><img src="../../images/creator/Sanoj.jpg"></center>
+				<center><img src="../../images/creator/userDp.png"></center>
 				<center>
-					<div class="card-title">Sanoj Ahamed</div>
+					<div class="card-title">Mohammed Zakky</div>
 					<div id="detail">
 						<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
 						<div class="duty"></div>
@@ -211,9 +210,9 @@
 				</center>
 			</div>
 			<div class="card">
-				<center><img src="../../images/creator/Sanoj.jpg"></center>
+				<center><img src="../../images/creator/userDp.png"></center>
 				<center>
-					<div class="card-title">Sanoj Ahamed</div>
+					<div class="card-title">Mohammed Aqeel</div>
 					<div id="detail">
 						<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
 						<div class="duty"></div>

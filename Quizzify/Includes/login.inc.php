@@ -22,7 +22,7 @@ print_r("grabbed all the info successfully");
 
     //going back to front page
 
-    header('Location: ');
+    header('Location: http://localhost/Quizzify/Quizzify/Interface/php_files/');
     // debug code
     print_r(" data saved successfully");
 

@@ -33,7 +33,7 @@ class signup extends DbConnector
 
         if (!$stmt) {
             // if there are any errors in the database 
-            header('Location: ../SignUp.php?error=stmtfailed');
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=stmtfailed');
             exit();
         }
 
@@ -56,7 +56,7 @@ class signup extends DbConnector
 
         if (!$stmt) {
             // if there are any errors in the database 
-            header('Location: ../SignUp.php?error=stmtfailed');
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=stmtfailed');
             exit();
         }
 

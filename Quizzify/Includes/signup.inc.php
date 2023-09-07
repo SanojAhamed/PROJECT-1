@@ -27,7 +27,7 @@ print_r("grabbed all the info successfully");
     $signup->signupUser();
 
     //going back to front page
-    header('Location: http://localhost/New/Interface/php_files/Home.php');
+    header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/Home.php');
     // debug code
     print_r(" data saved successfully");
 

@@ -10,7 +10,7 @@ class Login extends DbConnector
         $stmtAdmin = $this->connect()->prepare($queryAdmin);
 
         if (!$stmtAdmin->execute([$username])) {
-            header('Location: http://localhost/New/Interface/php_files/registration.php?error=statementFailed');
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=statementFailed');
             exit();
         }
 
@@ -22,7 +22,7 @@ class Login extends DbConnector
            session_start();
            $_SESSION["id"] = $admin["Admin_Login_Id"];
            $_SESSION["username"] = $admin["Login_user"];
-           header("Location: http://localhost/New/Interface/php_files/admin.php");
+           header("Location: http://localhost/Quizzify/Quizzify/dashboard3/dashboard.php");
            exit();
         }
 
@@ -31,7 +31,7 @@ class Login extends DbConnector
         $stmt = $this->connect()->prepare($query);
 
         if (!$stmt->execute([$username])) {
-            header('Location: http://localhost/New/Interface/php_files/registration.php?error=statementFailed');
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=statementFailed');
             exit();
         }
 
@@ -45,32 +45,34 @@ class Login extends DbConnector
                 $_SESSION["id"] = $user["User_Id"];
                 $_SESSION["username"] = $user["Username"];
                 
+                
                 if (isset($_POST['remember_me'])) {
                     // Set a cookie for the username
                     $cookie_name = "username";
                     $cookie_value = $user["Username"]; // Change this to the actual username field
-                    $expiration_time = time() + 86400 * 30; // Cookie will expire in 30 days
+                    
+                    $expiration_time = time() + (60*60*24) * 1; // Cookie will expire in a days
                     setcookie($cookie_name, $cookie_value, $expiration_time, "/");
                 }
 
                 // Check if the user is also an admin
                 if (isset($user["Admin_Login_Id"])) {
                     // Admin login
-                    header("Location: http://localhost/New/Interface/php_files/admin.php");
+                    header("Location: http://localhost/Quizzify/Quizzify/dashboard/dashboard/Dashboard.php");
                 } else {
                     // Regular user login
                     $insertQuery = "INSERT INTO login (User_Id, Login_time, Login_date) VALUES (:id, CURRENT_TIME(), CURRENT_DATE())";
                     $insertStmt = $this->connect()->prepare($insertQuery);
                     $insertStmt->bindParam(':id', $_SESSION["id"]);
                     $insertStmt->execute();
-                    header("Location: http://localhost/New/Interface/php_files/chooseRole.php");
+                    header("Location: http://localhost/Quizzify\Quizzify/Interface/php_files/chooseRole.php");
                 }
                 exit();
             }
         }
 
         // If neither regular user nor admin is found, it's an invalid login
-        header('Location: http://localhost/New/Interface/php_files/registration.php?error=invalidLogin');
+        header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=invalidLogin');
         exit();
     }
 

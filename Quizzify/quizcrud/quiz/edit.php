@@ -1,5 +1,6 @@
 <?php
 
+
 $connection = mysqli_connect("localhost","root","");
 $db = mysqli_select_db($connection,"quizzify");
 
@@ -46,6 +47,7 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="shortcut icon" type="png" href="http://localhost/New/images/icon2.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User View Application</title>
@@ -83,7 +85,7 @@ if(isset($_POST['submit']))
                                 <input type="text" name ="Password" class="form-control"  placeholder="Enter password" value="<?php echo $Password ?>"> 
                             </div>
                             <br>
-                            <input type="submit" class="btn btn-primary" name="submit" value="Edit">
+                            <input type="submit" name="submit" value="Change" style="background-color: #4AA017; color: white; border-color: #4AA017; border-radius: 15px;">
                         </form>
                     </div>
                 </div>

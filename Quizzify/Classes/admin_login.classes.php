@@ -19,16 +19,16 @@ class AdminLogin extends DbConnector
 
         if ($stmt->rowCount() == 0) {
             $stmt = null;
-            print_r("1");
-            // header('Location: http://localhost/New/Interface/php_files/registration.php?error=userNotFound');
+            // print_r("1");
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=userNotFound');
             exit();
         }
 
         $hashedPassword = $stmt->fetch(PDO::FETCH_ASSOC)['Login_pass'];
         if (!password_verify($password, $hashedPassword)) {
             $stmt = null;
-            // header('Location: http://localhost/New/Interface/php_files/registration.php?error=invalidLogin');
-            print_r("2");
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/registration.php?error=invalidLogin');
+            // print_r("2");
             exit();
         }
 
@@ -42,8 +42,8 @@ class AdminLogin extends DbConnector
         $stmt = $this->connect()->prepare("INSERT INTO admin (User_Id, Admin_Id) VALUES (:id, :id");
         $stmt->bindParam(':id', $_SESSION["id"]);
         $stmt->execute();
-        print_r("3");
-        header("Location: http://localhost/New/Interface/php_files/adminDashboard.php");
+        // print_r("3");
+        header("Location: http://localhost/Quizzify\Quizzify/Interface/php_files/adminDashboard.php");
         exit();
     }
 }

@@ -12,13 +12,13 @@ if (isset($_POST["submit"])) { // Changed to check if "submit" is set
 
     // Validation checks
     if (empty($username) || empty($email) || empty($password) || empty($confirm_password)) {
-        header('Location: http://localhost/New/Interface/php_files/resetPwd.php?error=emptyInput');
+        header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/resetPwd.php?error=emptyInput');
         exit();
     } elseif ($password !== $confirm_password) {
-        header('Location: http://localhost/New/Interface/php_files/resetPwd.php?error=passwordDoNotMatch');
+        header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/resetPwd.php?error=passwordDoNotMatch');
         exit();
     } else if((strlen($password) < 8)  && (!preg_match('/^[a-zA-Z0-9]$/', $password))){
-        header('Location: http://localhost/New/Interface/php_files/resetPwd.php?error=invalidPwd');
+        header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/resetPwd.php?error=invalidPwd');
         exit();
     }
 
@@ -30,16 +30,16 @@ if (isset($_POST["submit"])) { // Changed to check if "submit" is set
         // Reset the password
         if ($resetController->resetUser($username, $email, $password, $confirm_password)) {
             // Password reset successful
-            header('Location: http://localhost/New/Interface/php_files/resetPwd.php?success=reset'); 
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/resetPwd.php?success=reset'); 
             exit();
         } else {
             // Password reset failed
-            header('Location: http://localhost/New/Interface/php_files/resetPwd.php?error=resetFailed'); 
+            header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/resetPwd.php?error=resetFailed'); 
             exit();
         }
     } else {
         // User not found
-        header('Location: http://localhost/New/Interface/php_files/resetPwd.php?error=userNotFound'); 
+        header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/resetPwd.php?error=userNotFound'); 
         exit();
     }
 }

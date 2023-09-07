@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<link rel="shortcut icon" type="png" href="http://localhost/New/images/icon2.png">
+<link rel="shortcut icon" type="png" href="http://localhost/Quizzify/Quizzify/images/icon2.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset Password</title>
@@ -15,7 +15,7 @@
             <div class="heading"></div>
 
             <!-- change password -->
-            <form action="http://localhost/New/Includes/reset.inc.php" class="input-group" method="POST"> <!-- Removed the full URL -->
+            <form action="http://localhost/Quizzify/Quizzify/Includes/reset.inc.php" class="input-group" method="POST"> <!-- Removed the full URL -->
                 <br><br>
                 <h1 style="font-size: 20px; margin-top: 2px;">Confirm your Details to change password</h1><br>
                 

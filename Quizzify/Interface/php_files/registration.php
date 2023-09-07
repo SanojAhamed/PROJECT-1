@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" type="png" href="http://localhost/New/images/icon2.png">
+    <link rel="shortcut icon" type="png" href="http://localhost/Quizzify/Quizzify/images/icon2.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
@@ -69,14 +69,14 @@
 
                 <!--Login form-->
 
-                <form action="http://localhost/New/Includes/login.inc.php" id="Login" class="input-group1" method="POST" name="form1">
+                <form action="http://localhost/Quizzify/Quizzify/Includes/login.inc.php" id="Login" class="input-group1" method="POST" name="form1">
                     <br>
                     <input type="text" id="user" class="input-field" placeholder="Username" name="username" required value="<?php echo isset($_COOKIE['username']) ? $_COOKIE['username'] : ''; ?>">
                     <input type="password" id="pass" class="input-field" placeholder="Password" name="password" required value="">
                     <br><br><br>
                     <input type="checkbox" id="check" name="remember_me">
                     <label for="check" style="font-size: 12px; font-family: sans-serif;" name="remember_me" onclick="setcookie()"> Remember me</label><br><br>
-                    <span><a href="http://localhost/New/interface/php_files/resetPwd.php" name="reset">Forgot password?</a></span>
+                    <span><a href="http://localhost/Quizzify/Quizzify/interface/php_files/resetPwd.php" name="reset">Forgot password?</a></span>
                     <br><br><span>Not yet registered?&nbsp;&nbsp;<a href="#" onclick="myFunction1()" id="reg1">Register</a></span><br><br><br>
                     <span class="error2" style="color: red;"></span><br>
                     <button type="submit" value="" class="submit-btn1" name="submit1">LogIn</button>
@@ -85,7 +85,7 @@
                 <!--Register form-->
 
 
-                <form action="http://localhost/New/Includes/signup.inc.php" id="Register" class="input-group2" method="POST" name="form2">
+                <form action="http://localhost/Quizzify/Quizzify/Includes/signup.inc.php" id="Register" class="input-group2" method="POST" name="form2">
                     <table>
                         <tr>
                             <td><input type="text" class="input-field" placeholder="First Name" name="firstname"></td>
@@ -103,11 +103,14 @@
                     </table>
 
 
-                    <br><br>
+                    <br><label style="font-size: 13px; font-family: sans-serif;">Choose your option/s</label><br>
+                    
+                    <br>
+                    <input type="checkbox" id="" class="input-field" name="play" ><label style="font-size: 12px; font-family: sans-serif;">&nbsp;Play quiz</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="" class="input-field" name="create"><label style="font-size: 12px; font-family: sans-serif;">&nbsp;Create quiz</label><br><br>
+                    <span>Already registered?&nbsp;&nbsp;<a href="" onclick="myFunction2()" id="reg2">Login</a></span><br><br>
 
-                    <span>Already registered?&nbsp;&nbsp;<a href="" onclick="myFunction2()" id="reg2">Login</a></span><br>
-
-                    <input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()" /><span>I agree to the Terms & Conditions</span><br>
+                    <!-- <input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()" /><span>I agree to the Terms & Conditions</span><br> -->
 
                     <button type="submit" value="" class="submit-btn2" name="submit2" id="btn2">Register</button>
                 </form>
