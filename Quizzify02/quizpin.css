@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';
+}
+
+body{
+    background: #fff;
+    background-image: url('background.jpg');
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+.txt {
+    font-size: 38px;
+    font-weight: 500;
+    margin:30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #4AA017;
+    color:#fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+
+  /* Styles for the pop-up container */
+  
+
+
+
+/* Styles for the pop-up box */
+.popup-box {
+    background: white;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+input {
+    margin: 10px;
+    height: 40px;
+    width: 50px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-family: arimo;
+    font-size: 1.2rem;
+    background: #d4ece2;
+
+}
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup .form .form-element {
+    margin: 25px 0px;
+}
+
+.popup .form .form-element label {
+    font-size: 14px;
+    color: #222;
+}
+
+.popup .form .form-element label input[type="text"],
+.popup .form .form-element label input[type="number"],
+.popup .form .form-element label input[type="text"] {
+    margin-top: 5px;
+    display: block;
+
+}

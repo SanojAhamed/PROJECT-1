@@ -17,6 +17,7 @@ body{
 
 }
 
+
 body{
     background-size: cover;
     background-image: url('http://localhost/Quizzify/Quizzify/images/img8.jpg');
@@ -53,6 +54,7 @@ body{
     border: 0;
     outline: none;
     position: relative;
+    
 }
 
 #btn{

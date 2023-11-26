@@ -13,8 +13,6 @@ class loginController extends login
 
         $this->username = $username;
         $this->password = $password;
-
-
     }
 
     // validation handling
@@ -22,14 +20,13 @@ class loginController extends login
     public function loginUser()
     {
         if ($this->emptyInput() !== false) {
-            header('Location: ');
+            header('Location: ../Interface/Register.php?error=emptyInput');
             //debug code
             print_r("empty input");
             exit();
         }
 
         $this->getUser($this->username, $this->password);
-
     }
 
     private function emptyInput()
@@ -43,5 +40,12 @@ class loginController extends login
         return $result;
     }
 
-    
+    public function verifyEmailBeforeLogin($username)
+    {
+        $user = $this->getUser($username, $this->password);
+        if ($user && $user['is_verified'] == 1) {
+            return true; // Email verified
+        }
+        return false; // Email not verified
+    }
 }

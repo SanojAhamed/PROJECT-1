@@ -1,6 +1,9 @@
 <?php
 
-if(isset($_POST["submit2"])){
+namespace Classes;
+session_start();
+
+if (isset($_POST["submit2"])) {
 
     // grabbing the data from the form
 
@@ -10,25 +13,20 @@ if(isset($_POST["submit2"])){
     $username = $_POST["username"];
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
-    
-
-print_r("grabbed all the info successfully");
+    $play = $_POST["play"];
+    $create = $_POST["create"];
 
     // instantiating signup controler class
 
     include  "../Classes/DbConnector.php";
     include  "../Classes/signup.classes.php";
     include  "../Classes/signup-controller.classes.php";
-    
 
-    $signup = new signupController($firstname, $lastname, $email, $username, $password, $confirm_password);
+
+    $signup = new signupController($firstname, $lastname, $email, $username, $password, $confirm_password, $play, $create);
 
     // running error handlers and user signup
     $signup->signupUser();
 
-    //going back to front page
-    header('Location: http://localhost/Quizzify\Quizzify/Interface/php_files/Home.php');
-    // debug code
-    print_r(" data saved successfully");
-
+    
 }

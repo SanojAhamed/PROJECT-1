@@ -17,13 +17,18 @@ print_r("grabbed all the info successfully");
 
     $login = new loginController( $username, $password);
 
-    // running error handlers and user login
-    $login->loginUser();
-
-    //going back to front page
-
-    header('Location: http://localhost/Quizzify/Quizzify/Interface/php_files/');
-    // debug code
-    print_r(" data saved successfully");
+     // Check if the user's email is verified before allowing login
+     if ($login->verifyEmailBeforeLogin($username)) {
+        // Email verified, proceed with login
+        $login->loginUser();
+        // Going back to the front page
+        header('Location: ../Interface/Register.php?error=emailVerified');
+        // Debug code
+        print_r(" data saved successfully");
+    } else {
+        // Email not verified, redirect to error page or show a message
+        header('Location: ../Interface/Register.php?error=emailNotVerified');
+        exit();
+    }
 
 }
