@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
 <link rel="shortcut icon" type="png" href="http://localhost/Quizzify/Quizzify/images/icon2.png">
 	<meta charset="utf-8">
